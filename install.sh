@@ -42,4 +42,12 @@ echo "===========Install python==========" | tee -a log.out
 sudo apt-get install python -y | tee -a log.out
 sudo apt-get install python-mysql.connector | tee -a log.out
 sudo pip install Adafruit_WS2801 | tee -a log.out
-echo "===========Finished Installation===========" | tee -a log.out
+echo "===========Edit Crontab===========" | tee -a log.out
+#write out current crontab
+sudo crontab -l > mycron
+#echo new cron into cron file
+echo "@reboot python  $PWD/python/cocktailMachine.py" >> mycron
+#install new cron file
+sudo crontab mycron
+sudo rm mycron
+echo "===========Done Installing --> Restart Required===========" | tee -a log.out
