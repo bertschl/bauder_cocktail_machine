@@ -14,8 +14,11 @@ execute python/cocktailMachine.py as a python script:
 > python python/cocktailMachine.py
 ## Properties of the machine
 The hostname should always be ***"cocktail-machine"***.
+
 After running the install.sh script there will always be the setting for a wifi connection named:
 
 ***SSID***: cocktail-machine
 
 ***PASSWORD***: cocktail-machine
+
+This just so you can throw a wifi connection that the raspi knows, so you dont have to pen the case (yet again).
