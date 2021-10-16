@@ -14,5 +14,7 @@ execute python/cocktailMachine.py as a python script:
 ## Properties of the machine
 The hostname should always be ***"cocktail-machine"***.
 After running the install.sh script there will always be the setting for a wifi connection named:
-SSID: cocktail-machine
-PASSWORD: cocktail-machine
+
+****SSID***: cocktail-machine
+
+***PASSWORD***: cocktail-machine
