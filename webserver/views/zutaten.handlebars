@@ -1,0 +1,39 @@
+		<div id="menu">
+			<ul>
+				<li><a href="Home" accesskey="1" title="">Home</a></li>
+				<li><a href="Cocktails" accesskey="2" title="">Cocktail Interface</a></li>
+				<li><a href="Pumpen" accesskey="3" title="">Pumpen Interface</a></li>
+                <li class="current_page_item"><a href="Zutaten" accesskey="3" title="">Zutaten</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper2">  
+	<div id="welcome" class="container">
+    <center>
+    <table>
+    <tbody>
+        <td><strong><h1><center>Zutat</center></strong></h1></td>
+        <tr></tr>
+        {{#each data}}
+            <tr>
+            <form  method="POST" action="Zutat">
+            <td><h1><center>{{this.ZutatName}}</center></h1></td>
+            <input type="hidden" name="delete" value="{{this.ZutatID}}" />
+            <td><h1><center><input type="submit" id="delete" value="Löschen"/></center></h1></td>
+            </form>
+            </tr>
+        {{/each}}
+        <tr>
+        <form  method="POST" action="Zutat">
+            <td><h1><center><input type="text" name="neueZutat" placeholder="Neue Zutat" /></center></h1></td>
+            <td><h1><center><input type="submit" id="buttonNeueZutat" value="Hinzufügen"/></center></h1></td>
+        </form>
+        </tr>
+        
+    </tbody>
+</table>
+
+</center>
+    </div>
+</div>

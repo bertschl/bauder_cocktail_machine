@@ -1,0 +1,28 @@
+		<div id="menu">
+			<ul>
+				<li><a href="Home" accesskey="1" title="">Home</a></li>
+				<li class="current_page_item"><a href="Cocktails" accesskey="2" title="">Cocktail Interface</a></li>
+				<li><a href="Pumpen" accesskey="3" title="">Pumpen Interface</a></li>
+                <li><a href="Zutaten" accesskey="3" title="">Zutaten</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{{#each cocktails}}
+<div class="container">  
+    {{this.CocktailName}}
+	<div>
+    <center>
+    <table>
+    <tbody>
+        {{#each zutaten}}
+            <td>{{this.ZutatName}}</td>
+            <td>{{this.NumberOfParts    }}</td>
+        {{/each}}
+     </tbody>
+     </table>
+     </center>
+     </div>
+</div>
+
+{{/each}}

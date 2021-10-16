@@ -1,0 +1,40 @@
+		<div id="menu">
+			<ul>
+				<li><a href="Home" accesskey="1" title="">Home</a></li>
+				<li><a href="Cocktails" accesskey="2" title="">Cocktail Interface</a></li>
+				<li class="current_page_item"><a href="Pumpen" accesskey="3" title="">Pumpen Interface</a></li>
+                <li><a href="Zutaten" accesskey="3" title="">Zutaten</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="wrapper2">  
+	<div id="welcome" class="container">
+    <center>
+    <table>
+    <tbody>
+        <td><strong><h1>PumpenID</strong></h1></td>
+        <td><strong><h1>Raspi GPIO</strong></h1></td>
+        <td><strong><h1>Getränk</strong></h1></td>
+        <td><strong><h1>Neuer Wert</strong></h1></td>
+        <tr></tr>
+        {{#each data}}
+            <tr>
+                <td><h1><center>{{this.PumpenID}}</center></h1></td>
+                <td><h1><center>{{this.GPIO}}</center></h1></td>
+                <td><h1><center>{{this.Name}}</center></h1></td>
+                <td><h1><center>
+                    <select id = "myList">
+                    {{#each zutaten}}
+                        <option value = "{{this.Name}}">{{this.Name}}</option>
+                    {{/each}}
+                    </select>
+                </center></h1></td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</center>
+    </div>
+</div>
