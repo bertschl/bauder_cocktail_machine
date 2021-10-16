@@ -7,6 +7,7 @@ Give the install.sh file excution rights:
 Execute the Script: 
 > sudo ./install.sh
 
+If the machine only shows the welcome screen, there ususally is no DB access.
 Reboot the machine
 ## Manual start up
 execute python/cocktailMachine.py as a python script:
@@ -15,6 +16,6 @@ execute python/cocktailMachine.py as a python script:
 The hostname should always be ***"cocktail-machine"***.
 After running the install.sh script there will always be the setting for a wifi connection named:
 
-****SSID***: cocktail-machine
+***SSID***: cocktail-machine
 
 ***PASSWORD***: cocktail-machine

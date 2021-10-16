@@ -9,6 +9,7 @@ import mysql.connector
 from mysql.connector import Error
 import json
 import threading
+import os
 #GPIO HANDLER
 
 #Stop variable for display threading
@@ -513,7 +514,9 @@ if __name__ == '__main__':
         printLines("Baudinis Cocktail Maker", "Welcome Welcome")
         time.sleep(10)
         # initialisieren
-        importJson("data.json")
+        path = os.path.dirname(os.path.abspath(__file__)) + "/data.json"
+        print(path)
+        importJson(path)
         getDatabaseData()
         gpioInit()
 
