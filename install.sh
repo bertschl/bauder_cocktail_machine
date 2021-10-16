@@ -40,7 +40,7 @@ sudo mysql -h "localhost" -u "root"  "$MYSQL_DB_NAME" < "mysql/create.sql"
 sudo mysql -h "localhost" -u "root"  "$MYSQL_DB_NAME" < "mysql/insert.sql"
 echo "===========Install python==========" | tee -a log.out
 sudo apt-get install python -y | tee -a log.out
-sudo apt-get install python-mysql.connector | tee -a log.out
+sudo apt-get install python-mysql.connector -y | tee -a log.out
 sudo pip install Adafruit_WS2801 | tee -a log.out
 echo "===========Edit Crontab===========" | tee -a log.out
 #write out current crontab

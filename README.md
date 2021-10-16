@@ -21,4 +21,4 @@ After running the install.sh script there will always be the setting for a wifi 
 
 ***PASSWORD***: cocktail-machine
 
-This just so you can throw a wifi connection that the raspi knows, so you dont have to pen the case (yet again).
+This just so you can throw a wifi connection that the raspi knows, so you dont have to open the case (yet again).
