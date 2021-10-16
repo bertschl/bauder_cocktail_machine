@@ -46,7 +46,7 @@ echo "===========Edit Crontab===========" | tee -a log.out
 #write out current crontab
 sudo crontab -l > mycron
 #echo new cron into cron file
-echo "@reboot python  $PWD/python/cocktailMachine.py" >> mycron
+echo "@reboot python  $PWD/python/cocktailMachine.py > $PWD/cron_log.txt" >> mycron
 #install new cron file
 sudo crontab mycron
 sudo rm mycron
