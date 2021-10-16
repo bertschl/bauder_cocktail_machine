@@ -1,0 +1,19 @@
+{   
+    "dbInfo":{
+        "host": "localhost",
+        "database": "CocktailMachine",
+        "user": "cocktailMachine",
+        "password": "iLoveCocktails"},
+    "Buttons":{
+        "reload": 27,
+        "prev": 10,
+        "quantity": 22,
+        "stop": 5,
+        "start": 6,
+        "alc": 13,
+        "next": 26,
+        "manual": 18},
+    "LCD":{
+    "placeholder": -1
+    }
+}
