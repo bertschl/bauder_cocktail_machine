@@ -7,7 +7,7 @@ drop table if exists Zutat;
 drop table if exists Cocktail;
 
 CREATE TABLE Cocktail(
-    CocktailID int NOT NULL AUTO_INCREMENT,
+    CocktailID int NOT NULL,
     CocktailName varchar(50),
     PRIMARY KEY (CocktailID)
     );
@@ -23,7 +23,7 @@ CREATE TABLE Zubereitungsschritt(
     ON UPDATE RESTRICT
     );
 CREATE TABLE Zutat(
-    ZutatID int NOT NULL AUTO_INCREMENT,
+    ZutatID int NOT NULL,
     ZutatName varchar(100) NOT NULL,
     isAlcohol boolean not NULL,
     pumpingSpeed int not null,

@@ -1,24 +1,24 @@
 USE CocktailMachine;
-INSERT INTO Cocktail (CocktailName) VALUES('Vodka Mojito');
-INSERT INTO Cocktail (CocktailName) VALUES('Caiprinoska');
-INSERT INTO Cocktail (CocktailName) VALUES('Vodka Soda');
-INSERT INTO Cocktail (CocktailName) VALUES('Rum Daiquiri');
-INSERT INTO Cocktail (CocktailName) VALUES('Rum Mojito');
-INSERT INTO Cocktail (CocktailName) VALUES('Rum Cuatro Mismo');
-INSERT INTO Cocktail (CocktailName) VALUES('Rum Maracuja');
-INSERT INTO Cocktail (CocktailName) VALUES('Vodka Maracuja');
-INSERT INTO Cocktail (CocktailName) VALUES('Whisky Sour');
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('None', 0, 0);--1
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('Vodka', 1, 1.5);--2
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('Rum', 1, 1.5);--3
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('Limettensaft', 0, 1.5);--4
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('Zuckersirup', 0, 0.9);--5
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('Wasser', 0, 3);--6
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('Ananassaft', 0, 3);--7
-INSERT INTO Zutat (ZutatName, isAlcohol, pumpingSpeed) VALUES ('Maracujasaft', 0, 3);--8
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(1, 'Vodka Mojito');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(2, 'Caiprinoska');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(3, 'Vodka Soda');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(4, 'Rum Daiquiri');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(5, 'Rum Mojito');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(6, 'Rum Cuatro Mismo');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(7, 'Rum Maracuja');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(8, 'Vodka Maracuja');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(9, 'Whisky Sour');
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (1, 'None', 0, 0);--1
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (2, 'Vodka', 1, 1.5);--2
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (3, 'Rum', 1, 1.5);--3
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (4, 'Limettensaft', 0, 1.5);--4
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (5, 'Zuckersirup', 0, 0.9);--5
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (6, 'Wasser', 0, 3);--6
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (7, 'Ananassaft', 0, 3);--7
+INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (8, 'Maracujasaft', 0, 3);--8
 
 --VodkaMojito
-INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'Eis, Limttenviertel und Minzblaetter in das Glas geben.', 1);
+INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'Eis, Limettenviertel und Minzblaetter in das Glas geben.', 1);
 INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(2, 'go', 1);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(1, 2, 1.5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(1, 6, 5);
@@ -39,7 +39,7 @@ INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUE
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(4, 5, 2);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(4, 4, 2);
 --Vodka Rum Mojito
-INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(2, 'Limettenviertel, Minzublaetter und Eis in das Glas geben und leicht andruecken.', 5);
+INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(2, 'Limettenviertel, Minzblaetter und Eis in das Glas geben und leicht andruecken.', 5);
 INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(2, 'go', 5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(5, 3, 5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(5, 5, 2);
