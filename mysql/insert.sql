@@ -64,7 +64,7 @@ INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUE
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(8, 4, 1);
 --Whisky Sour
 INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'go', 9);
-INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 1, 5);
+INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 2, 5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 4, 3);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 5, 1.5);
 
