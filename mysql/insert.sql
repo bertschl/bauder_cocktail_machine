@@ -66,7 +66,7 @@ INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUE
 INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'go', 9);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 2, 5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 4, 3);
-INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 5, 1.5);
+INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 5, 1.6);
 
 INSERT INTO Pumpe (GPIO, ZutatID) VALUES(23, 4);
 INSERT INTO Pumpe (GPIO, ZutatID) VALUES(24, 7);
