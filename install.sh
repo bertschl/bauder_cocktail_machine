@@ -50,6 +50,6 @@ echo "@reboot python $PWD/python/cocktailMachine.py > $PWD/cron_log.txt" >> mycr
 #install new cron file
 sudo crontab mycron
 sudo rm mycron
-echo "===========Adding extra wifi===========" | tee -a log.out
-printf 'network={\n        ssid="cocktail-machine"\n        psk="cocktail-machine"\n}' | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
+#echo "===========Adding extra wifi===========" | tee -a log.out
+#printf 'network={\n        ssid="cocktail-machine"\n        psk="cocktail-machine"\n}' | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
 echo "===========Done Installing --> Restart Required===========" | tee -a log.out
