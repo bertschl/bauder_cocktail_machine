@@ -25,6 +25,7 @@ echo "===========Upgrade packet list===========" | tee -a log.out
 sudo apt-get upgrade -y
 echo "===========Install Openssh-Server==========" | tee -a log.out
 sudo apt-get install openssh-server -y | tee -a log.out
+sudo systemctl enable ssh
 echo "===========Install mariadb (mysql)==========" | tee -a log.out
 sudo apt-get install mariadb-server -y | tee -a log.out
 echo "===========Starting MariaDB==========" | tee -a log.out
