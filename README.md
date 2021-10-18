@@ -1,5 +1,10 @@
 # Cocktail Machine Readme
 ## Install
+Make sure that I2C is enabled
+>sudo raspi-config
+
+Interfaces -> I2C
+
 Copy all Files to the raspberry pi.
 Give the install.sh file excution rights: 
 > sudo chmod +x install.sh
