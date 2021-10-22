@@ -8,6 +8,7 @@ INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(6, 'Rum Cuatro Mismo');
 INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(7, 'Rum Maracuja');
 INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(8, 'Vodka Maracuja');
 INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(9, 'Whisky Sour');
+INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(10, 'Whisky Cola');
 INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (1, 'None', 0, 0);--1
 INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (2, 'Vodka', 1, 1.5);--2
 INSERT INTO Zutat (ZutatID, ZutatName, isAlcohol, pumpingSpeed) VALUES (3, 'Rum', 1, 1.5);--3
@@ -23,11 +24,6 @@ INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID)
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(1, 2, 1.5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(1, 6, 5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(1, 5, 0.6);
---Caiprinoska
-INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'Limettenviertel und Crushed Ice in das Glas geben.', 2);
-INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(2, 'go', 2);
-INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(2, 2, 1.5);
-INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(2, 5, 0.6);
 --Vodka Soda
 INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'go', 3);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(3, 2, 1.3);
@@ -63,10 +59,16 @@ INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUE
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(8, 2, 2);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(8, 4, 1);
 --Whisky Sour
-INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'go', 9);
+INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'Bitte Vodkaschlauch in Whisky stecken.', (SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Whisky Sour'))
+INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(2, 'go', 9);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 2, 5);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 4, 3);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES(9, 5, 1.6);
+--Whisky Cola/Ginger
+INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'Bitte Vodkaschlauch in Whisky stecken.', (SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Whisky Cola'))
+INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(2, 'go', (SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Whisky Cola'));
+INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES((SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Whisky Cola'), (SELECT ZutatID FROM Zutat WHERE ZutatName = 'Vodka'), 1);
+INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES((SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Whisky Cola'), (SELECT ZutatID FROM Zutat WHERE ZutatName = 'Wasser'), 3);
 
 INSERT INTO Pumpe (GPIO, ZutatID) VALUES(23, 4);
 INSERT INTO Pumpe (GPIO, ZutatID) VALUES(24, 7);
