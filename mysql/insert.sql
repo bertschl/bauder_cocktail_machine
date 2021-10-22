@@ -51,7 +51,7 @@ INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUE
 INSERT INTO Zubereitungsschritt (SchrittNummer, Beschreibung, schrittCocktailID) VALUES(1, 'go', (SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Gin Grapefruit'));
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES((SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Gin Grapefruit'), (SELECT ZutatID FROM Zutat WHERE ZutatName = 'Vodka'), 1);
 INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES((SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Gin Grapefruit'), (SELECT ZutatID FROM Zutat WHERE ZutatName = 'Grapefruit'), 3);
-INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES((SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Gin Grapefruit'), (SELECT ZutatID FROM Zutat WHERE ZutatName = 'Zuckersirup'), 0.5);
+INSERT INTO xRefCocktailZutat (xRefCocktailID, xRefZutatID, NumberOfParts) VALUES((SELECT CocktailID FROM Cocktail WHERE CocktailName = 'Gin Grapefruit'), (SELECT ZutatID FROM Zutat WHERE ZutatName = 'Zuckersirup'), 0.3);
 
 INSERT INTO Pumpe (GPIO, ZutatID) VALUES(23, 4);
 INSERT INTO Pumpe (GPIO, ZutatID) VALUES(24, 7);
