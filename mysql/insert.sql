@@ -1,6 +1,5 @@
 USE CocktailMachine;
 INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(1, 'Vodka Mojito');
-INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(2, 'Caiprinoska');
 INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(3, 'Vodka Soda');
 INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(4, 'Rum Daiquiri');
 INSERT INTO Cocktail (CocktailID, CocktailName) VALUES(5, 'Rum Mojito');
